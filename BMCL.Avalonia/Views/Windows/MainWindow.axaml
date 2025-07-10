@@ -1,0 +1,128 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="BMCL.Avalonia.Views.Windows.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="BMCL.Avalonia"
+        Width="880" Height="520"
+        Background="Transparent"
+        TransparencyLevelHint="AcrylicBlur"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        SystemDecorations="None"
+        WindowStartupLocation="CenterScreen">
+        
+    <Border Background="#B2FFFFFF">
+            <Grid>
+                    <!-- Title Bar -->
+                    <Border Height="57"
+                            Padding="24  0 24 0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Top">
+                            <Grid>
+                                    <TextBlock Text="BMCL"
+                                               Foreground="#333333"
+                                               FontSize="20"
+                                               FontFamily="{StaticResource MiSans-Medium}"
+                                               HorizontalAlignment="Left"
+                                               VerticalAlignment="Center">
+                                            <TextBlock.Effect>
+                                                    <DropShadowEffect
+                                                            OffsetX="0"
+                                                            OffsetY="0"
+                                                            BlurRadius="4"
+                                                            Color="#3F000000"/>
+                                            </TextBlock.Effect>
+                                    </TextBlock>
+                                    
+                                    <StackPanel Width="113"
+                                          Height="33"
+                                          Orientation="Horizontal"
+                                          Spacing="6"
+                                          HorizontalAlignment="Right"
+                                          VerticalAlignment="Center">
+                                            <Button x:Name="Minimize"
+                                                    Background="Transparent"
+                                                    Width="33"
+                                                    Height="33"
+                                                    Click="Minimize_OnClick">
+                                                    <Image Width="20"
+                                                           Height="20"
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center">
+                                                            <Image.Source>
+                                                                    <SvgImage>
+                                                                            <SvgImage.Source>
+                                                                                    <SvgSource Path="/Assets/Images/min.svg"/>
+                                                                            </SvgImage.Source>
+                                                                    </SvgImage>
+                                                            </Image.Source>
+                                                    </Image>
+                                            </Button>
+                                            
+                                            <Button x:Name="Maximize"
+                                                    Background="Transparent"
+                                                    Width="33"
+                                                    Height="33"
+                                                    Click="Maximize_OnClick">
+                                                    <Svg x:Name="MaximizeIcon" Width="20" Height="20" Path="/Assets/Images/max-min.svg"/>
+                                            </Button>
+                                            
+                                            <Button x:Name="Close"
+                                                    Background="Transparent"
+                                                    Width="33"
+                                                    Height="33"
+                                                    Click="Close_OnClick">
+                                                    <Image Width="20"
+                                                           Height="20"
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center">
+                                                            <Image.Source>
+                                                                    <SvgImage>
+                                                                            <SvgImage.Source>
+                                                                                    <SvgSource Path="/Assets/Images/close.svg"/>
+                                                                            </SvgImage.Source>
+                                                                    </SvgImage>
+                                                            </Image.Source>
+                                                    </Image>
+                                            </Button>
+                                    </StackPanel>
+                            </Grid>
+                    </Border>
+                    
+                    <!-- Nav Bar -->
+                    <Border Background="#99FFFFFF"
+                            BoxShadow="0 0 8 0 #3F000000"
+                            Height="48"
+                            Padding="24  0 24 0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Bottom">
+                            <!-- <Button x:Name="LaunchGame" -->
+                            <!--         Background="Transparent" -->
+                            <!--         BorderBrush="#0080FF" -->
+                            <!--         BorderThickness="2" -->
+                            <!--         CornerRadius="500" -->
+                            <!--         Width="73" Height="28" -->
+                            <!--         HorizontalAlignment="Right" -->
+                            <!--         VerticalAlignment="Center"> -->
+                            <!--         <Button.Effect> -->
+                            <!--                 <DropShadowEffect -->
+                            <!--                         OffsetX="0" -->
+                            <!--                         OffsetY="0" -->
+                            <!--                         BlurRadius="4" -->
+                            <!--                         Color="#3F000000"/> -->
+                            <!--         </Button.Effect> -->
+                            <!--          -->
+                            <!--         <TextBlock Text="开始游戏" -->
+                            <!--                    Foreground="#0080FF" -->
+                            <!--                    FontSize="13" -->
+                            <!--                    FontFamily="{StaticResource MiSans-Regular}" -->
+                            <!--                    HorizontalAlignment="Center" -->
+                            <!--                    VerticalAlignment="Center"/> -->
+                            <!-- </Button> -->
+                    </Border>
+            </Grid>
+    </Border>
+</Window>

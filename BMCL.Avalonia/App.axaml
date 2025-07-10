@@ -1,0 +1,28 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BMCL.Avalonia.App"
+             xmlns:local="using:BMCL.Avalonia"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+  
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+             
+    <Application.Resources>
+        <FontFamily x:Key="MiSans-Regular">avares://BMCL.Avalonia/Assets/Fonts#MiSans Regular</FontFamily>
+        <FontFamily x:Key="MiSans-Normal">avares://BMCL.Avalonia/Assets/Fonts#MiSans Normal</FontFamily>
+        <FontFamily x:Key="MiSans-Thin">avares://BMCL.Avalonia/Assets/Fonts#MiSans Thin</FontFamily>
+        <FontFamily x:Key="MiSans-ExtraLight">avares://BMCL.Avalonia/Assets/Fonts#MiSans ExtraLight</FontFamily>
+        <FontFamily x:Key="MiSans-Light">avares://BMCL.Avalonia/Assets/Fonts#MiSans Light</FontFamily>
+        <FontFamily x:Key="MiSans-Medium">avares://BMCL.Avalonia/Assets/Fonts#MiSans Medium</FontFamily>
+        <FontFamily x:Key="MiSans-Semibold">avares://BMCL.Avalonia/Assets/Fonts#MiSans Semibold</FontFamily>
+        <FontFamily x:Key="MiSans-Bold">avares://BMCL.Avalonia/Assets/Fonts#MiSans Bold</FontFamily>
+        <FontFamily x:Key="MiSans-Demibold">avares://BMCL.Avalonia/Assets/Fonts#MiSans Demibold</FontFamily>
+        <FontFamily x:Key="MiSans-Heavy">avares://BMCL.Avalonia/Assets/Fonts#MiSans Heavy</FontFamily>
+    </Application.Resources>
+</Application>
